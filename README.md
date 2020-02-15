@@ -34,11 +34,10 @@ aws s3 cp ./regional-s3-assets/ s3://my-bucket-us-east-1/video-on-demand-on-aws/
 ```
 
 ### 4. Launch the CloudFormation template.
-* Get the link of the video-on-demand-on-aws.template uploaded to your Amazon S3 bucket.
-* Deploy the Video on Demand to your account by launching a new AWS CloudFormation stack using the link of the video-on-demand-on-aws.template.
-
+Use the S3 url contain your video-on-demand-on-aws.template under deployment/dist folder For example: https://vod-mediaconvert-workshop-ray.s3.cn-northwest-1.amazonaws.com.cn/video-on-demand-on-aws/cn-quickstart/video-on-demand-on-aws.template
+Specify your parameters and create the stack
+Once the stack be executed successfully, record the outputs of stack
 ## Additional Resources
-
 ### Services
 - [AWS Elemental MediaConvert](https://aws.amazon.com/mediaconvert/)
 - [AWS Elemental MediaPackage](https://aws.amazon.com/mediapackage/)
@@ -56,17 +55,3 @@ aws s3 cp ./regional-s3-assets/ s3://my-bucket-us-east-1/video-on-demand-on-aws/
 - [Demo SPEKE Reference Server](https://github.com/awslabs/speke-reference-server)
 
 ***
-
-Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
