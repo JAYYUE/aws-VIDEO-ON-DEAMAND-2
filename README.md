@@ -14,7 +14,7 @@ chmod +x ./run-unit-tests.sh
 ```
 
 ### 2. 创建一个Amazon S3桶
-CloudFormation template 被配置为从正在启动该模板的区域中的 Amazon S3 存储桶中提取 Lambda 部署包。在所需区域中创建一个存储桶，（例如，my-bucket）。
+CloudFormation template 被配置为从正在启动该模板的区域中的 Amazon S3 存储桶中提取 Lambda 部署包。在所需区域中创建一个存储桶，（例如，my-bucket my-bucket = the name of the S3 bucket in AWS Ningxia region）。
 ```
 aws s3 mb s3://my-bucket
 ```
@@ -30,7 +30,7 @@ chmod +x ./build-s3-dist.sh
 
 Deploy the distributable to the Amazon S3 bucket in your account:
 ```
-aws s3 cp ./regional-s3-assets/ s3://my-bucket-us-east-1/video-on-demand-on-aws/v5.0.0-custom/ --recursive --acl bucket-owner-full-control
+aws s3 cp ./regional-s3-assets/ s3://my-bucket/video-on-demand-on-aws/v5.0.0-custom/ --recursive --acl bucket-owner-full-control
 ```
 
 ### 4. Launch the CloudFormation template.
